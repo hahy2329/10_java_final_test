@@ -48,7 +48,40 @@ class LinkedList{
 		}
 	}
 	
-	public 
+	public ListNode searchNode(String data) {
+		ListNode temp = this.head;
+		
+		while(temp != null) {
+			if(data == temp.getData())
+				return temp;
+			else temp = temp.link;
+		}
+		
+		return temp;
+	}
+	
+	public void reverseList() {
+		ListNode next = head;
+		ListNode current = null;
+		ListNode pre = null;
+		
+		while(next != null) {
+			pre = current;
+			current = next;
+			next = next.link;
+			current.link = pre;
+		}
+		
+		head = current;
+	}
+	
+	
+	public void printList() {
+		ListNode temp = this.head;
+		System.out.println("L = (");
+		
+		
+	}
 	
 }
 
